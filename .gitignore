@@ -1,2 +1,5 @@
-#Ignoriere das .vs-Verzeichnis
+# Ignoriere das .vs-Verzeichnis
 .vs/
+
+# Ignoriere den obj-Ordner und seine Inhalte
+obj/
