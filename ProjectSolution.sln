@@ -5,6 +5,11 @@ VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventProjectApi", "EventProjectApi\EventProjectApi.csproj", "{9CCB0F9A-D11E-4F8A-BB3E-2DB842D7D34B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Projektmappenelemente", "Projektmappenelemente", "{8FA0D27E-F518-4FFF-9547-536284523DB1}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore.txt = .gitignore.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
