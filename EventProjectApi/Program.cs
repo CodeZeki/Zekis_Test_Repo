@@ -13,7 +13,7 @@ namespace EventProjectApi
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-
+            //Mein neuer Commentar
             // Add services to the container.
             builder.Services.AddDbContext<ApplicationDbContext>(options =>   //   Registriert er Db Context 
             {
