@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rbret\\OneDrive\\Desktop\\ZekisApiProjekt\\EventProjectApi\\EventProjectApi.csproj": {}
+    "C:\\Users\\Mcloud\\Desktop\\Blala\\EventProjectApi\\EventProjectApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rbret\\OneDrive\\Desktop\\ZekisApiProjekt\\EventProjectApi\\EventProjectApi.csproj": {
+    "C:\\Users\\Mcloud\\Desktop\\Blala\\EventProjectApi\\EventProjectApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rbret\\OneDrive\\Desktop\\ZekisApiProjekt\\EventProjectApi\\EventProjectApi.csproj",
+        "projectUniqueName": "C:\\Users\\Mcloud\\Desktop\\Blala\\EventProjectApi\\EventProjectApi.csproj",
         "projectName": "EventProjectApi",
-        "projectPath": "C:\\Users\\rbret\\OneDrive\\Desktop\\ZekisApiProjekt\\EventProjectApi\\EventProjectApi.csproj",
-        "packagesPath": "C:\\Users\\rbret\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rbret\\OneDrive\\Desktop\\ZekisApiProjekt\\EventProjectApi\\obj\\",
+        "projectPath": "C:\\Users\\Mcloud\\Desktop\\Blala\\EventProjectApi\\EventProjectApi.csproj",
+        "packagesPath": "C:\\Users\\Mcloud\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mcloud\\Desktop\\Blala\\EventProjectApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\rbret\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Mcloud\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,10 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
-          "C:\\Users\\rbret\\OneDrive\\Desktop\\NuGetPakete": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://gitea.app-prod.crometheus.online/api/packages/Shared/nuget/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
@@ -52,6 +49,28 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.4, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.4, )"
+            },
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[8.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.4, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.4.0, )"
