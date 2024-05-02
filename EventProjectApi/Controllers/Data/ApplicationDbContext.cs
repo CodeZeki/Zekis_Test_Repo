@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using EventProjectApi.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 
@@ -11,5 +12,7 @@ namespace EventProjectApi.Controllers.Data
 			: base(options)
 		{
 		}
+
+		public DbSet<EventModel> Events { get; set; }
 	}
 }
