@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace EventProjectApi.Migrations
 {
     /// <inheritdoc />
-    public partial class initial : Migration
+    public partial class init : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -56,7 +56,9 @@ namespace EventProjectApi.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Creator = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CreatorId = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CreatorName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CreatorPrifileImage = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Info = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     IsRecurring = table.Column<bool>(type: "bit", nullable: false),
@@ -66,7 +68,8 @@ namespace EventProjectApi.Migrations
                     LocationAddress = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     LocationComment = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     LocationWebsite = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    LocationDestination = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    LocationDestination = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Created = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {

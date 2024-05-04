@@ -22,7 +22,7 @@ namespace EventProjectApi.Controllers
         [HttpGet("allevents")]
         public IActionResult GetAllEvents()
         {
-            var events = _context.Events.ToList();
+            var events = _context.Events.OrderByDescending(d => d.Created).ToList();
             return Ok(events);
         }
 
@@ -42,7 +42,7 @@ namespace EventProjectApi.Controllers
 
         //// POST: api/Events
         ///[CreateRoute] // Use the custom attribute
-        [HttpPost]
+        [HttpPost("create")]
         public IActionResult CreateEvent([FromBody] EventModel eventModel)
         {
             if (!ModelState.IsValid)
@@ -57,18 +57,34 @@ namespace EventProjectApi.Controllers
         }
 
         // PUT: api/Events/5
-        [HttpPut("{id}")]
+        [HttpPut("edit/{id}")]
         public IActionResult UpdateEvent(int id, [FromBody] EventModel eventModelFromDb)
         {
-            if (id != eventModelFromDb.Id)
+            var modelFromDb = _context.Events.Where(e => e.Id == id).FirstOrDefault();
+
+            if (modelFromDb == null)
             {
                 return BadRequest();
             }
 
             try
             {
-                var updatedEvent = _context.Update(eventModelFromDb);
-                return Ok(updatedEvent);
+                //var updatedEvent = _context.Update(eventModelFromDb);
+
+                modelFromDb.Name = eventModelFromDb.Name;
+                modelFromDb.LocationAddress = eventModelFromDb.LocationAddress;
+                modelFromDb.EventImage = eventModelFromDb.EventImage;
+                modelFromDb.Info = eventModelFromDb.Info;
+                modelFromDb.Start = eventModelFromDb.Start;
+                modelFromDb.LocationName = eventModelFromDb.LocationName;
+                modelFromDb.LocationAddress = eventModelFromDb.LocationAddress;
+                modelFromDb.LocationComment = eventModelFromDb.LocationComment;
+                modelFromDb.LocationWebsite = eventModelFromDb.LocationWebsite;
+                modelFromDb.LocationDestination = eventModelFromDb.LocationDestination;
+
+                _context.SaveChanges();
+
+                return Ok();
             }
             catch (Exception)
             {
